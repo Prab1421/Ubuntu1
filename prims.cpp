@@ -27,17 +27,17 @@ vector<pair<int,int>> prims(vector<vector<pair<int,int>>>graph, vector<int>&vis,
     return mst;
 }
 int main(){
-    int v,e;
+    int V,e;
     cout << "Enter the number of offices and lines: ";
-    cin >> v >> e;
-    vector<vector<pair<int,int>>> graph(v);
+    cin >> V >> e;
+    vector<vector<pair<int,int>>> graph(V);
     for(int i=0; i<e; i++) {
         int u,v,w;
         cin >> u>>v>>w;
         graph[u].push_back({v,w});
         graph[v].push_back({u,w});
     }
-    vector<int> vis(v,0);
+    vector<int> vis(V,0);
     int start=0;
     vector<pair<int, int>> mst= prims(graph, vis, start);
     cout<<"Minimum spanning tree lines: "<<endl; 
