@@ -53,7 +53,7 @@ int main() {
     cin >> V >> E; 
     vector<pair<int, pair<int, int>>> edges(E); 
     cout << "Enter the edges:- "; 
-    for(int i=0; i< V; i++) { 
+    for(int i=0; i< E; i++) { 
         int u, v, w; 
         cin >> u >> v >> w; 
         edges[i] = {w, {u, v}}; 
